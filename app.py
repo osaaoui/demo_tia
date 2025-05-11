@@ -14,7 +14,11 @@ from langchain.indexes import VectorstoreIndexCreator
 from langchain.chains import RetrievalQA
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_core.output_parsers import StrOutputParser
+import pathlib
+import sys
 
+# Add this if using relative imports
+sys.path.append(str(pathlib.Path().absolute()))
 # Configuration
 load_dotenv()
 warnings.filterwarnings("ignore")
